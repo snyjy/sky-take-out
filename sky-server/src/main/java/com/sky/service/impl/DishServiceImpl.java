@@ -184,4 +184,14 @@ public class DishServiceImpl implements DishService {
             }
         }
     }
+
+    @Override
+    public List<Dish> list(Long categoryId) {
+        Dish dish = Dish.builder()
+                .status(StatusConstant.ENABLE)
+                .categoryId(categoryId)
+                .build();
+        List<Dish> list = dishMapper.list(dish);
+        return list;
+    }
 }
