@@ -11,5 +11,5 @@ public interface SetmealDishMapper {
      * @param dishIds
      * @return
      */
-    List<Long> getSetmealIdByDishId(List<Long> dishIds);
+    List<Long> getSetmealIdByDishIds(List<Long> dishIds);
 }
