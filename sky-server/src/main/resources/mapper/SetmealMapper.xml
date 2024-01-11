@@ -53,4 +53,11 @@
         order by s.create_time desc
     </select>
 
+    <delete id="deleteBatch">
+        delete from setmeal where id in
+        <foreach collection="ids" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
 </mapper>
