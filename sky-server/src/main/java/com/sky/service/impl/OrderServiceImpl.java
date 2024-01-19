@@ -196,6 +196,11 @@ public class OrderServiceImpl implements OrderService {
         return new PageResult(page.getTotal(),list);
     }
 
+    /**
+     * 查询订单详情
+     * @param id
+     * @return
+     */
     @Override
     public OrderVO details(Long id) {
 
